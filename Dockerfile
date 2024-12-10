@@ -5,6 +5,7 @@ WORKDIR /app
 # 3. Kopiere den gesamten Projektinhalt in das Image
 COPY . .
 # 4. Baue das Projekt mit Gradle
+RUN chmod +x gradlew
 RUN ./gradlew build
 # 5. Exponiere Ports (optional)
 EXPOSE 8080
